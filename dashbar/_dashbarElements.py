@@ -1,0 +1,72 @@
+all_bars = {
+    "classic": {
+        "start": '[',
+        "head": '#',
+        "trail": '#',
+        "filler": ".",
+        "finish": ']',
+    },
+    "arrow": {
+        "start": "|",
+        "head": ">",
+        "trail": "=",
+        "filler": " ",
+        "finish": "|",
+    },
+    "box": {
+        "start": "|",
+        "head": "\u2588",
+        "trail": "\u2588",
+        "filler": " ",
+        "finish": "|",
+    },
+    "circle_charger": {
+        "start": "|",
+        "head": "\u25CF",
+        "trail": "\u25CF",
+        "filler": "\u25CB",
+        "finish": "|",
+    },
+    "box_charger": {
+        "start": "|",
+        "head": "\u25A0",
+        "trail": "\u25A0",
+        "filler": "\u25A1",
+        "finish": "|",
+    },
+    "striped": {
+        "start": "[",
+        "head": "=",
+        "trail": "=",
+        "filler": "-",
+        "finish": "]",
+    },
+    "dollar": {
+        "start": "[",
+        "head": "$",
+        "trail": "$",
+        "filler": " ",
+        "finish": "]",
+    },
+    "box_shade": {
+        "start": "|",
+        "head": "\u2588",
+        "trail": "\u2588",
+        "filler": "\u2591",
+        "finish": "|"
+    },
+    "pipe": {
+        "start": "[",
+        "head": "|",
+        "trail": "|",
+        "filler": " ",
+        "finish": "]",
+    },
+    "custom": {
+        "start": "[",
+        "head": "#",
+        "trail": "#",
+        "filler": ".",
+        "finish": "]",
+    },
+}
