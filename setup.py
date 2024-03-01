@@ -1,16 +1,20 @@
 from setuptools import setup
+import dashbar
 
-with open("README.md", 'r') as f:
-    description=f.read()
+def getLongDescription():
+    with open("README.md", 'r') as f:
+        return f.read()
 
 setup(
     name="dashbar",
-    author="xyzpw",
-    maintainer="xyzpw",
-    version="1.0",
+    author=dashbar.__author__,
+    maintainer=dashbar.__author__,
+    version=dashbar.__version__,
+    python_requires=">=3.7",
+    license="MIT",
     url="https://github.com/xyzpw/dashbar/",
-    description="A progress-bar designed to be useful and easy to use.",
-    long_description=description,
+    description=dashbar.__description__,
+    long_description=getLongDescription(),
     classifiers=[
         "Operating System :: POSIX :: Linux",
         "Topic :: Utilities",

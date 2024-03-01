@@ -48,10 +48,10 @@ def dash(steps: int, dash_type: str = "classic", desc: str = None,
         mydash = _dashBuilder.buildFromProgress(dash_type, progress, steps)
         if spinner and progress < steps-1:
             mydash += " " + str(spinner_parts[progress%4-1])
-        if percent:
-            mydash += " " + str(int(progress/steps*100)) + "%"
         if step_counter:
             mydash += f" {progress}/{steps}"
+        if percent:
+            mydash += " " + str(int(progress/steps*100)) + "%"
         if desc != None:
             textBeforeDash = desc
             if mydash_status != None:
@@ -67,7 +67,8 @@ def dash(steps: int, dash_type: str = "classic", desc: str = None,
     del mydash
 
 def autodash(count: int, dash_type: str = "classic", desc: str = None,
-             percent: bool = False, spinner: bool = False):
+             percent: bool = False, spinner: bool = False,
+             step_counter: bool = False):
     global mydash
     progress = 0
     while progress < count:
@@ -75,10 +76,14 @@ def autodash(count: int, dash_type: str = "classic", desc: str = None,
         progress += 1
         steps = shutil.get_terminal_size().columns-2
         steps = _dashBuilder.fixDashSteps(steps, desc, percent, spinner)
+        if step_counter:
+            steps -= len(str(count))*2+2
         equivalent_progress = int(progress / count * steps)
         mydash = _dashBuilder.buildFromProgress(dash_type, equivalent_progress, steps)
         if spinner and equivalent_progress < steps-1:
             mydash += " " + str(spinner_parts[progress%4-1])
+        if step_counter:
+            mydash += f" {progress}/{count}"
         if percent:
             mydash += " " + str(int(progress/count*100)) + "%"
         if bool(desc):
