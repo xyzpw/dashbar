@@ -62,6 +62,20 @@ all_bars = {
         "filler": " ",
         "finish": "]",
     },
+    "heart": {
+        "start": "|",
+        "head": "\u2665",
+        "trail":"\u2665",
+        "filler":"\u2661",
+        "finish":"|",
+    },
+    "radioactive": {
+        "start": "|",
+        "head": "\u2622",
+        "trail": "\u2622",
+        "filler": " ",
+        "finish": "|",
+    },
     "custom": {
         "start": "[",
         "head": "#",
