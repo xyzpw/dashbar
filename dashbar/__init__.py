@@ -14,9 +14,10 @@ __all__ = [
     "Dashbar",
 ]
 
-__version__ = "2.0"
+__version__ = "2.1"
 __description__ = "A progress-bar designed to be useful and easy to use."
 __author__ = "xyzpw"
+__license__ = "MIT"
 global all_bars
 all_bars = dict(_dashbarElements.all_bars)
 

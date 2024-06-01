@@ -76,6 +76,13 @@ all_bars = {
         "filler": " ",
         "finish": "|",
     },
+    "benzene": {
+        "start": "|",
+        "head": "\u232c",
+        "trail": "\u232c",
+        "filler": " ",
+        "finish": "|",
+    },
     "custom": {
         "start": "[",
         "head": "#",

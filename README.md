@@ -38,6 +38,7 @@ List of dashbars:
 - pipe
 - heart
 - radioactive
+- benzene
 - custom
 
 List of dashbar elements:
